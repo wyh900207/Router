@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901D64AE1FBEE3F000BD0AC6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901D64AD1FBEE3F000BD0AC6 /* String+Extension.swift */; };
 		90E397E61FAC582F00D536F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E397E51FAC582F00D536F4 /* AppDelegate.swift */; };
 		90E397E81FAC582F00D536F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E397E71FAC582F00D536F4 /* ViewController.swift */; };
 		90E397EB1FAC582F00D536F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E397E91FAC582F00D536F4 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		901D64AD1FBEE3F000BD0AC6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		90E397E21FAC582F00D536F4 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E397E51FAC582F00D536F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E397E71FAC582F00D536F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				90E397F81FAC589500D536F4 /* RouteAble.swift */,
 				90E397FA1FAC595000D536F4 /* RouteModule.swift */,
 				90E398001FAC62C200D536F4 /* Router.swift */,
+				901D64AD1FBEE3F000BD0AC6 /* String+Extension.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E397E81FAC582F00D536F4 /* ViewController.swift in Sources */,
+				901D64AE1FBEE3F000BD0AC6 /* String+Extension.swift in Sources */,
 				90E397FB1FAC595000D536F4 /* RouteModule.swift in Sources */,
 				90E398011FAC62C200D536F4 /* Router.swift in Sources */,
 				90E397E61FAC582F00D536F4 /* AppDelegate.swift in Sources */,
@@ -295,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3U4T4928GM;
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wang.homerice.Router;
@@ -309,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3U4T4928GM;
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wang.homerice.Router;
