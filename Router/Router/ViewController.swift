@@ -13,19 +13,13 @@ class ViewController: UIViewController, RouteAble {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let url = "https:www.baidu.com"
-        let routerQuerys = url.parseToQuerys()
-        guard let urls = routerQuerys.url,
-            let params = routerQuerys.params else {
-                fatalError("error")
-        }
-        print("url is : \(urls), params is : \(params)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let url = "https://SecondViewController?hello=123&world=234"
+        let secondVC = SecondViewController()
+        secondVC.url = url
+        navigationController?.pushViewController(secondVC, animated: true)
     }
     
 }
