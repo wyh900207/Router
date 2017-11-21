@@ -10,7 +10,7 @@ extension Selector {
 }
 
 class SecondViewController: UIViewController {
-    var url: String?
+    @objc private var url: String = ""
     @objc private var hello: String = ""
     @objc private var world: String = ""
 
@@ -24,22 +24,25 @@ class SecondViewController: UIViewController {
         button.bounds = CGRect(x: 0, y: 0, width: 100, height: 100);
         button.addTarget(self, action: .buttonTapped, for: .touchUpInside)
         view.addSubview(button)
-
-        setup(with: url)
+        
         print("hello is : \(hello), world is : \(world)")
     }
 
+}
+
+/// Actions
+extension SecondViewController {
     @objc func buttonTapped() {
         print("Second ViewControler button tapped!")
-        let thirdVC = ThirdViewController()
-        thirdVC.url = "https://ThirdViewController?paramOne=123&paramTwo=5232432432fsafds"
-        navigationController?.pushViewController(thirdVC, animated: true)
+        let url = "https://ThirdViewController?paramOne=hello&paramTwo=world"
+        Router.shared.push(to: url)
     }
 }
 
-extension SecondViewController: RouterUrlProtocol  {
-    func setup(with url: String?) {
-        guard let params = url?.parseToQueries().params else {
+extension SecondViewController: RouterUrlProtocol {
+    func setup(with url: String) {
+        self.url = url
+        guard let params = url.parseToQueries().params else {
             print("url is null, please check the url")
             return
         }

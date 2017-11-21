@@ -16,15 +16,16 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup(with: url)
         print("param_one is \(paramOne), param_two is \(paramTwo)")
+        
+        view.backgroundColor = UIColor.white
     }
-    
+
 }
 
 extension ThirdViewController: RouterUrlProtocol {
-    func setup(with url: String?) {
-        guard let params = url?.parseToQueries().params else {
+    func setup(with url: String) {
+        guard let params = url.parseToQueries().params else {
             print("url is null, please check the url")
             return
         }

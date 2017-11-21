@@ -17,9 +17,7 @@ class ViewController: UIViewController, RouteAble {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let url = "https://SecondViewController?hello=123&world=234"
-        let secondVC = SecondViewController()
-        secondVC.url = url
-        navigationController?.pushViewController(secondVC, animated: true)
+        Router.shared.push(to: url)
     }
     
 }

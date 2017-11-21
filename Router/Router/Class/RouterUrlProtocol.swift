@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RouterUrlProtocol {
-    func setup(with url: String?)
+    @objc func setup(with url: String)
 }
